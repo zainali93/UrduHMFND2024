@@ -357,6 +357,6 @@ If you use this work or the released datasets, please cite:
 
 ## License
 
-The source code in this repository is released under the [MIT License](LICENSE).
+The source code in this repository is released under the [MIT License](https://github.com/zainali93/UrduHMFND2024/tree/master?tab=MIT-1-ov-file).
 
 The datasets included in this repository are derived from previously published Urdu fake news datasets and may remain subject to the licenses and usage conditions of their respective original sources.
