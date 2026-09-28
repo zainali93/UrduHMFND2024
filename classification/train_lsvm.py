@@ -65,7 +65,7 @@ def clean_text(text):
     The preprocessing removes URLs, punctuation, and stop words.
     """
 
-    text1 = str(text)
+    text = str(text)
 
     # Remove URLs
     text = re.sub(r"http\S+|www\.\S+", " ", text)
