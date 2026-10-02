@@ -6,7 +6,9 @@ This work introduces four-class fake news detection for Urdu by distinguishing b
 
 The repository provides the four-class datasets and scripts for reproducing the Linear SVM, XLM-RoBERTa, and proposed conjoint classification experiments reported in the paper.
 
----
+## Video Overview
+
+https://github.com/user-attachments/assets/8aaf99e8-9983-403b-9fd9-1dbf4393ae3e
 
 ## Methodology
 
@@ -36,8 +38,6 @@ The proposed conjoint detection framework is illustrated below:
 <p align="center">
   <em>Proposed conjoint fake news detection architecture.</em>
 </p>
-
----
 
 ## Repository Structure
 
@@ -69,8 +69,6 @@ UrduHMFND2024/
 ├── README.md
 └── requirements.txt
 ```
-
----
 
 ## Installation
 
@@ -108,8 +106,6 @@ The Hugging Face `Trainer` automatically uses an available CUDA-enabled GPU.
 
 All commands below assume that they are executed from the root directory of the repository.
 
----
-
 ## Datasets
 
 Four Urdu fake news datasets are provided under the `Datasets/` directory. Each dataset has predefined `train.xlsx` and `test.xlsx` files and contains `text` and `label` columns.
@@ -133,8 +129,6 @@ Datasets 1 and 2 primarily contain short news texts or headlines and are categor
 The released test files preserve the withheld test sets used in the experimental setup. For model training, a validation subset is constructed from the remaining training data.
 
 For further details regarding the construction, collection, machine-generated text creation, quality control, and characteristics of the datasets, please refer to the paper and the original dataset publications cited therein.
-
----
 
 ## Linear SVM Baseline
 
@@ -160,8 +154,6 @@ Dataset4
 ```
 
 The pipeline performs traditional text preprocessing followed by TF-IDF feature extraction and Linear SVM classification. The script reports precision, recall, and F1-score for each of the four classes together with overall classification accuracy.
-
----
 
 ## XLM-RoBERTa Baseline
 
@@ -207,8 +199,6 @@ MTrue
 ```
 
 The script fine-tunes `xlm-roberta-base`, selects the best checkpoint using validation performance, and evaluates the resulting model on the withheld test data.
-
----
 
 ## Conjoint Fake News Detection
 
@@ -271,8 +261,6 @@ Machine + True => MTrue
 
 The final evaluation reports precision, recall, and F1-score for each four-class label together with overall accuracy.
 
----
-
 ## Experimental Settings
 
 For the XLM-R and conjoint experiments, the released scripts provide configurable training parameters at the beginning of each script.
@@ -299,8 +287,6 @@ The test data is withheld from model training and validation.
 
 > **Note on reproducibility:** The released scripts provide configurable default hyperparameters. For the exact experimental settings used to obtain the results reported in the paper, please refer to the hyperparameter configurations specified in the paper.
 
----
-
 ## Evaluation
 
 The classification scripts report:
@@ -321,8 +307,6 @@ MTrue
 
 The XLM-R and conjoint scripts support evaluation on the four individual datasets as well as the **Short**, **Long**, and **All** combined settings.
 
----
-
 ## Paper
 
 The paper is available through the ACL Anthology:
@@ -331,8 +315,6 @@ The paper is available through the ACL Anthology:
 
 **Muhammad Zain Ali, Yuxia Wang, Bernhard Pfahringer, and Tony C Smith.**  
 Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), ACL 2025, pp. 3419–3428.
-
----
 
 ## Citation
 
@@ -353,10 +335,8 @@ If you use this work or the released datasets, please cite:
 }
 ```
 
----
-
 ## License
 
 The source code in this repository is released under the [MIT License](https://github.com/zainali93/UrduHMFND2024/tree/master?tab=MIT-1-ov-file).
 
-The datasets included in this repository are derived from previously published Urdu fake news datasets and may remain subject to the licenses and usage conditions of their respective original sources.
+The datasets included in this repository are derived from previously published Urdu fake news datasets and may remain subject to the licenses and usage conditions of their respective sources.
